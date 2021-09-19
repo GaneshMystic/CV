@@ -12,7 +12,6 @@ body{
 	overflow : scroll;
 	border : 10px solid #bbbbbb;
 	margin : 0px;
-
 	width: calc(100%-20px);
 	overflow:scroll;
 }
@@ -27,39 +26,60 @@ div{
 }
 .page{
 	float: left;
-	width : 70%;
+	width : 68%;
+	margin-left: 2%;
 	height: 100%;
 	transition-duration: 300ms;
 	transition-timing-function: ease-out;
-	
 }
-
-
 
 #personal{
 	float: left;
-	width: 30%;
+	width: 28%;
+	margin-left: 2%;
 	background-color: #f6fbfe;
 	transition-delay: 100ms;
 }
 
 .tab{
 	float : left;
-	width : 94%;
-	padding : 10px;
-	
+	padding-left: 15px;
+	margin: 0px;
+	width: 94%;
 }
 .center{
 	text-align: center;
 }
 .jestified{
 	text-align: justify;
+	margin-bottom: 6px;
 }
 .left{
 	text-align: left;
 }
 .right{
 	text-align: right;
+}
+.icon{
+	float: left;
+	width: 20px;
+	height: auto;
+	margin-right: 10px;
+
+}
+.assets{
+	height: 28px;
+	margin: 0px;
+	float: right;
+}
+.dot{
+	float: left;
+	margin-top: 3px;
+	margin-left: -20px;
+	width: 6px;
+	height: 6px;
+	border-radius: 6px;
+	background-color: #5486f2;
 }
 #photo{
 
@@ -70,9 +90,13 @@ div{
 }
 ul{
 	list-style-type:none;
+	text-indent: 5%;
+}
+li{
+	margin-left: 20px;
 }
 #content{
-	text-indent: 5%;
+	text-indent: 5px;
 	text-align: justify;
 	font-size: large;
 	
@@ -80,6 +104,7 @@ ul{
 h1{
 	color:#5486f2;
 	font-size:34px;
+
 }
 h2{
 	color:#252c3b;
@@ -90,6 +115,8 @@ h3{
 	color: #5486f2;
 	font-size:24px;
 	font-variant: small-caps;
+	margin-top: 8px;
+	margin-bottom: 6px;
 }
 p{
 	font-size: 16px;
