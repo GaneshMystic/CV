@@ -59,15 +59,20 @@ function contactTab(){
         "118,Ramachandra Nagar, Fort Nagar West, Othakkalmandapam, Coimbatore - 641032"
     ]
     var block = "";
+    var icons = [
+        "icons/1.png",
+        "icons/2.png",
+        "icons/3.png",
+    ]
     for(let i = 0; i<contact.length ; i++){
-        var temp = contact[i];
+        var temp = "<div><img class='icon' src='"+icons[i]+"'>"+contact[i]+"</div>";
         block += item(temp)+"<br>";
     }
     tab("Contact","<ul>"+block+"</ul>","contact");
 }
 
 function personal(){
-    na = "MYSTIC"
+    na = "GANESH K S"
     document.getElementById("name").innerHTML = cen(na);
     objectiveTab();
     educationTab();
@@ -77,8 +82,8 @@ function personal(){
 function project(){
     var heading = cen("<h2>Project</h2>");
     var topics = [
-        "ENHACED AR",
-        "IMPLEMENTATION OF IOT IN VEHICLE PAYLOAD MOINITERING"
+        "enhanced ar",
+        "implementation of iot for vehicle payload monitering"
     ]
     var one = [
         "I made an realtime interactive AR with Physcics based Rendering.",
@@ -87,7 +92,7 @@ function project(){
         "The device capture ambient lighting and provide reflections.",
     ];
     var two =[
-        "We used load cell to measure electric vehicle payload.",
+        "We used load cell to measureelectric vehicle payload.",
         "This data is send to the AWS cloud via Wi-fi",
         "This enables engineers to check loading and battery warenty.",
         "This is also constantly monitered and displayed on vehicle dashboard.",
@@ -101,7 +106,7 @@ function project(){
         block += "<ul>";
         var temp = desc[i];
         for(let j= 0; j < temp.length; j++){
-            block += item(just(temp[j]));
+            block += item(just("<div class = 'dot'></div>"+temp[j]));
         }
         block += "</ul>";
         block += "<br>";
@@ -110,7 +115,7 @@ function project(){
     tab(heading,block,"project");
 }
 function ciricular(){
-    var heading = cen("<h2>Ciricular</h2>");
+    var heading = cen("<h2>Extra-ciricular Activities</h2>");
     var topics = [
         "mentoring",
         "class representatrive",
@@ -143,9 +148,9 @@ function ciricular(){
 
 }
 function certifiaction(){
-    var heading = cen("<h2>Certifiaction</h2>");
+    var heading = cen("<h2>Achivements and Certifiaction</h2>");
     var topics = [
-        "robatics camp",
+        "robotics camp",
         "project expo",
     ]
     var one = [
@@ -172,7 +177,29 @@ function certifiaction(){
 }
 //next update
 function softwere(){
-    return
+    var heading = cen("<h2>softwere Exposure</h2>");
+    var topics = [
+        "parametric modeling",
+        "concept modelling",
+        "analysis",
+        "office package",
+        "programming languages",
+    ]
+    var assets = [
+        "assets/mech.jpg",
+        "assets/blender.jpg",
+        "assets/ansys.jpg",
+        "assets/office.jpg",
+        "assets/cs.jpg",
+    ]
+    var block = "";
+    for(let i = 0; i< topics.length; i++){
+        block += "<div>"
+        block += "<img class='assets' src = '"+assets[i]+"'>";
+        block += left(head3(topics[i]));
+        block += "</div>"
+    }
+    tab(heading,block,"softwere");
 }
 
 
@@ -190,18 +217,22 @@ professional();
 
 function sty(){
     var width = window.innerWidth;
+    //tab
     if(width<1352 && width>650){
-        document.getElementById("personal").style ="width: 70%;margin-left: 15%";
+        document.getElementById("personal").style ="width: 70%;margin-left: 15%;";
         document.getElementById("professional").style ="margin-left: calc(15%);background-color:greeen";
         
     }
+    //phone
     else if(width<650 ){
         document.getElementById("personal").style ="width: 90%;margin-left: 5%";
         document.getElementById("professional").style ="width: 90%;margin-left: calc(5%);background-color:greeen";
         
     }
+    //pc
     else{
-        document.getElementById("personal").style ="";
+        var hei = document.getElementById("professional").clientHeight;
+        document.getElementById("personal").style =" height:"+hei+"px;";
         document.getElementById("professional").style ="";
     }
 }
